@@ -1,18 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="Correo Electrónico"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:password="true" />
+
+        <Button
+            android:id="@+id/buttonSignin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Ingresar" />
+
+        <ImageButton
+            android:id="@+id/imageButtonGoogle"
+            android:layout_width="51dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:background="@drawable/google" />
+
+        <ImageButton
+            android:id="@+id/imageButtonFacebook"
+            android:layout_width="53dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:background="@drawable/facebook" />
+
+        <TextView
+            android:id="@+id/textViewSignup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No tengo una cuenta"
+            android:textAlignment="center"
+            android:textColorLink="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textViewForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Olvide mi Contraseña"
+            android:textAlignment="center"
+            android:textColorLink="@color/colorPrimary" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
